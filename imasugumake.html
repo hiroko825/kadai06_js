@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Makeup Artist Matching App</title>
+  </head>
+
+  <body>
+    <button id="find-makeup-artist-btn">
+      今すぐメイクしてくれる人を探す！<!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+      </head>
+      <body>
+        
+      </body>
+      </html>
+    </button>
+
+    <div class="candidate-list" style="display: none">
+      <ul>
+        <li>
+          <div class="candidate-card">
+            <div class="candidate-photo">
+              <img src="1.jpg" alt="Face 1" />
+            </div>
+            <p class="candidate-name">Sayaka</p>
+            <p class="candidate-info">口コミ評価 ★★★★☆</p>
+          </div>
+        </li>
+        <li>
+          <div class="candidate-card">
+            <div class="candidate-photo">
+              <img src="2.jpg" alt="Face 2" />
+            </div>
+            <p class="candidate-name">Akane</p>
+            <p class="candidate-info">口コミ評価 ★★★★★</p>
+          </div>
+        </li>
+        <li>
+          <div class="candidate-card">
+            <div class="candidate-photo">
+              <img src="3.jpg" alt="Face3" />
+            </div>
+            <p class="candidate-name">Kumi</p>
+            <p class="candidate-info">口コミ評価 ★★★★★</p>
+          </div>
+        </li>
+        <!-- 他の候補者カードも同様に追加 -->
+      </ul>
+    </div>
+
+    <div class="area-selection" style="display: none">
+      <p>希望エリアを選択</p>
+      <select id="area-select">
+        <option value="渋谷エリア">渋谷エリア</option>
+        <option value="新宿エリア">新宿エリア</option>
+        <option value="横浜エリア">横浜エリア</option>
+      </select>
+    </div>
+
+    <div id="questionnaire" style="display: none">
+      <p>※ご回答ください※</p>
+      <br />
+      <div class="monshin1">
+        <p>今日はどんなメイクにしますか？</p>
+        <br />
+        <label>
+          <input type="radio" name="makeup-type" value="ナチュラル" />
+          ナチュラル
+        </label>
+        <label>
+          <input type="radio" name="makeup-type" value="フォーマル" />
+          フォーマル
+        </label>
+        <label>
+          <input type="radio" name="makeup-type" value="トレンド" />
+          トレンド </label
+        ><br />
+      </div>
+      <div class="monshin2">
+        <p>お時間は何分いただけますか？</p>
+        <br />
+        <label>
+          <input type="radio" name="time-limit" value="15分" /> 15分
+        </label>
+        <label>
+          <input type="radio" name="time-limit" value="30分" /> 30分
+        </label>
+        <label>
+          <input type="radio" name="time-limit" value="45分" /> 45分
+        </label>
+      </div>
+      <div class="monshin3">
+        <p>お肌はどんなタイプですか？</p>
+        <br />
+        <label>
+          <input type="radio" name="skin-type" value="乾燥肌" /> 乾燥肌
+        </label>
+        <label>
+          <input type="radio" name="skin-type" value="オイリー肌" /> オイリー肌
+        </label>
+        <label>
+          <input type="radio" name="skin-type" value="混合肌" /> 混合肌
+        </label>
+      </div>
+      <button id="submit-btn">送信</button>
+    </div>
+
+    <div id="message" style="display: none">\ 予約完了 /</div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const findMakeupArtistBtn = document.getElementById("find-makeup-artist-btn");
+    const candidateList = document.querySelector(".candidate-list");
+    const areaSelection = document.querySelector(".area-selection");
+    const areaSelect = document.getElementById("area-select");
+    const questionnaire = document.getElementById("questionnaire");
+    const message = document.getElementById("message");
+    const submitBtn = document.getElementById("submit-btn"); // 既存のボタンを取得する
+
+    findMakeupArtistBtn.addEventListener("click", function () {
+        candidateList.style.display = "block";
+    });
+
+    const candidateCards = document.querySelectorAll(".candidate-card");
+
+    candidateCards.forEach(function (card) {
+        card.addEventListener("click", function () {
+            areaSelection.style.display = "block";
+        });
+    });
+
+    areaSelect.addEventListener("change", function () {
+        if (!questionnaire.contains(submitBtn)) { // 既存の submit-btn を使用する
+            questionnaire.appendChild(submitBtn);
+        }
+        questionnaire.style.display = "block";
+    });
+
+    submitBtn.addEventListener("click", function () {
+        questionnaire.style.display = "none";
+        message.style.display = "block";
+    });
+});
+    </script>
+  </body>
+</html>
