@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f8f8;
+    background: linear-gradient(90deg, rgb(248, 242, 244), rgb(249, 137, 167));
+    padding: 20px;
+}
+
+/* Button style */
+#find-makeup-artist-btn {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+#find-makeup-artist-btn:hover {
+    background-color: #e91e63;
+}
+
+/* Candidate list style */
+.candidate-list, .area-selection, #questionnaire {
+    text-align: center;
+    font-size: 16px;
+}
+
+.candidate-list ul, .area-selection p {
+    list-style: none;
+    padding: 0;
+
+}
+
+.candidate-list ul li, .area-selection select {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.candidate-card, #area-select, #questionnaire {
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0 auto 20px;
+}
+
+.candidate-card:hover {
+    transform: translateY(-10px);
+}
+
+.candidate-info, .area-selection p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Candidate photo style */
+.candidate-photo {
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.candidate-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Candidate name style */
+.candidate-name {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* message style */
+#message {
+    width: 100%;
+    max-width: 300px;
+    background-color: #e91e63;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Questionnaire style */
+#questionnaire {
+    width: 300px;
+}
+
+#questionnaire div {
+    margin-bottom: 15px;
+    font-size: smaller;
+}
+
+#questionnaire label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#questionnaire textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+#submit-btn {
+    width: 100%;
+    max-width: 200px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: #e91e63;
+}
+
+/* 問診表のスタイル */
+.monshin1,
+.monshin2,
+.monshin3 {
+    font-size: small;
+}
